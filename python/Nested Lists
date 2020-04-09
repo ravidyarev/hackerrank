@@ -1,0 +1,23 @@
+if __name__ == '__main__':
+    bl=[]
+    al=[]
+    cl=[]
+    nl=[]
+    for i in range(int(input())):
+        name = input()
+        score = float(input())
+        al.append(name)
+        al.append(score)
+        cl.append(score)
+        bl.append(al)
+        al=[]
+    
+    dl=sorted(list(set(cl)))
+    t=dl[1]
+    for i in range(0,len(bl)):
+        if bl[i][1]== t:
+            nl.append(bl[i][0])
+    
+    zl=sorted(nl)
+    for i in range(0,len(zl)):
+        print(zl[i])
